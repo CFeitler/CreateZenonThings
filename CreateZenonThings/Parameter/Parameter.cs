@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CreateZenonThings.Parameter
+﻿namespace CreateZenonThings.Parameter
 {
   public abstract class Parameter
   {
@@ -16,5 +10,6 @@ namespace CreateZenonThings.Parameter
     undefined = 0,
     ReactionMatrix,
     Function,
+    Script
   }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Scada.AddIn.Contracts;
+﻿using Scada.AddIn.Contracts;
 
 namespace CreateZenonThings.Creator
 {

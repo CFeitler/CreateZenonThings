@@ -48,9 +48,11 @@
     <Compile Include="Constants\DynamicProperties.cs" />
     <Compile Include="Creator\FunctionCreator.cs" />
     <Compile Include="Creator\ICreate.cs" />
+    <Compile Include="Creator\ScriptCreator.cs" />
     <Compile Include="Parameter\FunctionParameter.cs" />
     <Compile Include="Parameter\Parameter.cs" />
     <Compile Include="Parameter\ReactionMatrixParameter.cs" />
+    <Compile Include="Parameter\ScriptParameter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

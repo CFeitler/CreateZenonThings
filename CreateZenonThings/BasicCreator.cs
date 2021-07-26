@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CreateZenonThings.Creator;
 using CreateZenonThings.Parameter;
 using Scada.AddIn.Contracts;
@@ -24,6 +21,9 @@ namespace CreateZenonThings
             break;
           case ParameterType.Function:
             new FunctionCreator().Create(project,parameter);
+            break;
+          case ParameterType.Script:
+            new ScriptCreator().Create(project, parameter);
             break;
           default:
             throw new ArgumentOutOfRangeException();

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CreateZenonThings.Constants
+﻿namespace CreateZenonThings.Constants
 {
   public static class DynamicProperties
   {
@@ -15,6 +8,12 @@ namespace CreateZenonThings.Constants
     public static readonly string SetValueIsDirect = "SetValue[0].IsDirect";
     public static readonly string SetValueVariable = "SetValue[0].Variable";
     public static readonly string ArchiveName = "ArvName";
+
+    #endregion
+
+    #region Script
+
+    public static readonly string Functions = "Functions";
 
     #endregion
   }

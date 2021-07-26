@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CreateZenonThings.Constants;
 using CreateZenonThings.Parameter;
 using Scada.AddIn.Contracts;
 using Scada.AddIn.Contracts.Function;
-using Scada.AddIn.Contracts.Historian;
 
 namespace CreateZenonThings.Creator
 {
