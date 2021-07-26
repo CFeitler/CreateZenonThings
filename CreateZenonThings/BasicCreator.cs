@@ -7,7 +7,7 @@ using Scada.AddIn.Contracts;
 
 namespace CreateZenonThings
 {
-    public class BasicCreator 
+    public class BasicCreator : ICreate
     {
       public void Create(IProject project, Parameter.Parameter parameter)
       {
