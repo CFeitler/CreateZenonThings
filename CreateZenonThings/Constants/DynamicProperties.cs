@@ -8,6 +8,7 @@
     public static readonly string SetValueIsDirect = "SetValue[0].IsDirect";
     public static readonly string SetValueVariable = "SetValue[0].Variable";
     public static readonly string ArchiveName = "ArvName";
+    public static readonly string ScriptName = "Script";
 
     #endregion
 

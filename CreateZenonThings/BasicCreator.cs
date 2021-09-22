@@ -17,7 +17,7 @@ namespace CreateZenonThings
             throw new InvalidEnumArgumentException("Function Type unknown!");
             break;
           case ParameterType.ReactionMatrix:
-            throw new NotImplementedException("ReMa Creator not implemented yet!");
+            new ReactionMatrixCreator().Create(project, parameter);
             break;
           case ParameterType.Function:
             new FunctionCreator().Create(project,parameter);

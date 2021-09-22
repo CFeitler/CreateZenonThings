@@ -43,7 +43,8 @@ namespace CreateZenonThings.Creator
         case FunctionType.SelectScript:
           throw new NotImplementedException(); break;
         case FunctionType.ExecuteScript:
-          throw new NotImplementedException(); break;
+          CreateExecuteScriptFuntion(project, functionParameter);
+          break;
         case FunctionType.SwitchOnlinePrintingOnOff:
           throw new NotImplementedException(); break;
         case FunctionType.PrintCurrentValues:
@@ -273,6 +274,14 @@ namespace CreateZenonThings.Creator
       var function = project.FunctionCollection[stopArchiveParameter.Name] 
                      ?? project.FunctionCollection.Create(stopArchiveParameter.Name, stopArchiveParameter.FunctionType);
       function.SetDynamicProperty(DynamicProperties.ArchiveName, stopArchiveParameter.ArchiveId);
+    }
+
+    private void CreateExecuteScriptFuntion(IProject project, FunctionParameter parameter)
+    {
+      if (!(parameter is ExecuteScriptParameter executeScriptParameter)) throw new ArgumentException($"Function Creator got wrong parameter of type: {parameter.FunctionType}");
+      var function = project.FunctionCollection[executeScriptParameter.Name] 
+                     ?? project.FunctionCollection.Create(executeScriptParameter.Name, executeScriptParameter.FunctionType);
+      function.SetDynamicProperty(DynamicProperties.ScriptName ,executeScriptParameter.ScriptName);
     }
   }
 }

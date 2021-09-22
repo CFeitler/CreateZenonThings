@@ -46,6 +46,16 @@ namespace CreateZenonThings.Parameter
     public string ArchiveId { get; set; }
   }
 
+  public class ExecuteScriptParameter : FunctionParameter
+  {
+    public ExecuteScriptParameter()
+    {
+      FunctionType = FunctionType.ExecuteScript;
+    }
+
+    public string ScriptName { get; set; }
+  }
+
 
 
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Scada.AddIn.Contracts.ReactionMatrix;
 
 namespace CreateZenonThings.Parameter
 {
@@ -13,28 +14,22 @@ namespace CreateZenonThings.Parameter
     public string Name { get; set; } = "";
 
     public List<Condition> Conditions { get; set; } = new List<Condition>();
-
-    public enum ReactionMatrixType
-    {
-      undefined = 0,
-      Binary,
-      MultiBinary,
-      Numeric,
-      MultiNumeric,
-      String
-    }
-
+     
     public class Condition
     {
       public ValueComparison Comparison { get; set; } = ValueComparison.any;
       public string Value { get; set; } = "";
+      public int? FunctionIdInstant { get; set; }
+      public int DelaySeconds { get; set; } = 0;
+      public bool TreatEachChangeOfValueAsNewLimitViolation { get; set; } = false;
       public enum ValueComparison
       {
         any = 0,
-        greater,
-        less,
-        equal
+        greater = 1,
+        less = 2,
+        equal = 3
       }
+      
     }
   }
 }
