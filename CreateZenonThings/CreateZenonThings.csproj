@@ -50,6 +50,7 @@
     <Compile Include="Creator\ICreate.cs" />
     <Compile Include="Creator\ReactionMatrixCreator.cs" />
     <Compile Include="Creator\ScriptCreator.cs" />
+    <Compile Include="Parameter\EquipmentModelParameter.cs" />
     <Compile Include="Parameter\FunctionParameter.cs" />
     <Compile Include="Parameter\Parameter.cs" />
     <Compile Include="Parameter\ReactionMatrixParameter.cs" />

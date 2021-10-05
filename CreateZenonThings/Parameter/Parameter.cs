@@ -10,6 +10,7 @@
     undefined = 0,
     ReactionMatrix,
     Function,
-    Script
+    Script,
+    EquipentModel
   }
 }
