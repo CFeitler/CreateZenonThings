@@ -25,6 +25,9 @@ namespace CreateZenonThings
           case ParameterType.Script:
             new ScriptCreator().Create(project, parameter);
             break;
+          case ParameterType.EquipentModel:
+            new EquipmentModelCreator().Create(project,parameter);
+            break;
           default:
             throw new ArgumentOutOfRangeException();
         }

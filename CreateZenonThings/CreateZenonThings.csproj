@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="BasicCreator.cs" />
     <Compile Include="Constants\DynamicProperties.cs" />
+    <Compile Include="Constants\XmlTags.cs" />
+    <Compile Include="Creator\EquipmentModelCreator.cs" />
     <Compile Include="Creator\FunctionCreator.cs" />
     <Compile Include="Creator\ICreate.cs" />
     <Compile Include="Creator\ReactionMatrixCreator.cs" />
@@ -56,12 +58,26 @@
     <Compile Include="Parameter\ReactionMatrixParameter.cs" />
     <Compile Include="Parameter\ScriptParameter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\XmlResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XmlResources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ZenonExtensions\zenonExtensions\zenonExtensions.csproj">
       <Project>{880283f4-0b74-45c8-b89e-d11ec78bed6a}</Project>
       <Name>zenonExtensions</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XML_TEMPLATE_EQUIPMENT_MODEL.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\XmlResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XmlResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
