@@ -61,6 +61,26 @@ namespace CreateZenonThings.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;
+        ///&lt;Subject ShortName=&quot;zenOn(R) exported project&quot; MainVersion=&quot;10000&quot;&gt;
+        ///  &lt;Apartment ShortName=&quot;zenOn(R) assigns&quot; Version=&quot;10000&quot;&gt;
+        ///    &lt;Assign ShortName=&quot;ALLOCATION_NAME&quot;&gt;
+        ///      &lt;Name&gt;ALLOCATION_NAME&lt;/Name&gt;
+        ///      &lt;Description /&gt;
+        ///      &lt;SourceVariable&gt;SOURCE_VARIABLE&lt;/SourceVariable&gt;
+        ///      &lt;TargetVariable&gt;TARGET_VARIABLE&lt;/TargetVariable&gt;
+        ///      &lt;TriggerVariable&gt;TRIGGER_VARIABLE&lt;/TriggerVariable&gt;
+        ///      &lt;TriggerType&gt;0&lt;/TriggerType&gt;
+        ///      &lt;SystemModelGroup /&gt;
+        ///    &lt;/ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string XML_TEMPLATE_ALLOCATION {
+            get {
+                return ResourceManager.GetString("XML_TEMPLATE_ALLOCATION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Subject ShortName=&quot;zenOn(R) exported project&quot; MainVersion=&quot;8200&quot;&gt;
         ///	&lt;Apartment ShortName=&quot;zenOn(R) System Model objects&quot; Version=&quot;8200&quot;&gt;

@@ -47,11 +47,14 @@
     <Compile Include="BasicCreator.cs" />
     <Compile Include="Constants\DynamicProperties.cs" />
     <Compile Include="Constants\XmlTags.cs" />
+    <Compile Include="Creator\AllocationCreator.cs" />
     <Compile Include="Creator\EquipmentModelCreator.cs" />
     <Compile Include="Creator\FunctionCreator.cs" />
     <Compile Include="Creator\ICreate.cs" />
     <Compile Include="Creator\ReactionMatrixCreator.cs" />
     <Compile Include="Creator\ScriptCreator.cs" />
+    <Compile Include="Creator\XmlFileHandling.cs" />
+    <Compile Include="Parameter\AllocationParameter.cs" />
     <Compile Include="Parameter\EquipmentModelParameter.cs" />
     <Compile Include="Parameter\FunctionParameter.cs" />
     <Compile Include="Parameter\Parameter.cs" />
@@ -78,6 +81,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>XmlResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\XML_TEMPLATE_ALLOCATION.XML" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

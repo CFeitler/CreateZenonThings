@@ -11,6 +11,7 @@
     ReactionMatrix,
     Function,
     Script,
-    EquipentModel
+    EquipentModel,
+    Allocation
   }
 }

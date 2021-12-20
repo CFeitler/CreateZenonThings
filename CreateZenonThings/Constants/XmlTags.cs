@@ -8,11 +8,10 @@ namespace CreateZenonThings.Constants
 {
   public static class XmlTags
   {
+    public const string Apartment = "Apartment";
+
     public static class EquipmentModel
     {
-      #region Equipment Model
-
-      public const string Apartment = "Apartment";
       public const string SystemModel = "SystemModel";
       public const string Model = "Model";
       public const string Groups = "Groups";
@@ -20,8 +19,18 @@ namespace CreateZenonThings.Constants
       public const string ChildGroups = "ChildGroups";
       public const string Name = "Name";
       public const string Guid = "GUID";
+    }
 
-      #endregion
+    public static class Allocation
+    {
+      public const string Assign = "Assign";
+      public const string ShortName = "ShortName";
+      public const string Name = "Name";
+      public const string SourceVariable = "SourceVariable";
+      public const string TargetVariable = "TargetVariable";
+      public const string TriggerVariable = "TriggerVariable";
+      public const string TriggerType= "TriggerType";
+
     }
   }
 }

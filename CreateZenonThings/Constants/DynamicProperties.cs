@@ -17,5 +17,13 @@
     public static readonly string Functions = "Functions";
 
     #endregion
+
+    #region Allocation
+    public static readonly string DynPropTriggerVariable = "TriggerVariable";
+    public static readonly string DynPropTriggerType = "TriggerType";
+    #endregion
+
+
+
   }
 }

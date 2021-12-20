@@ -28,6 +28,9 @@ namespace CreateZenonThings
           case ParameterType.EquipentModel:
             new EquipmentModelCreator().Create(project,parameter);
             break;
+          case ParameterType.Allocation:
+            new AllocationCreator().Create(project, parameter);
+            break;
           default:
             throw new ArgumentOutOfRangeException();
         }

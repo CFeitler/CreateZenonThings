@@ -33,37 +33,14 @@ namespace CreateZenonThings.Creator
 
       // Creating the Equipment Model in a zenon compatible format and import
       var xmlTemplate = GetZenonCompatibleEquipmentModelXml();
-      xmlTemplate.Root.Element(XmlTags.EquipmentModel.Apartment)
+      xmlTemplate.Root.Element(XmlTags.Apartment)
         .Add(new XElement(XmlTags.EquipmentModel.SystemModel, xmlEquipmentModel));
-      var xmlFile = CreateTempFilePath("EquipmentModel.xml");
+      var xmlFile =  XmlFileHandling.CreateTempFilePath(this.GetType().ToString(), "EquipmentModel.xml");
       File.WriteAllText(xmlFile, xmlTemplate.ToString());
       project.EquipmentModeling.ImportFromXml(xmlFile);
 
       // Cleanup
       File.Delete(xmlFile);
-    }
-
-    /// <summary>
-    /// This creates an xml file from the template in resources
-    /// </summary>
-    /// <returns>The filepath of the temporary file</returns>
-    private string CreateXmlFileFromResourcesTemplate(string filename)
-    {
-      var tempXmlFile = CreateTempFilePath(filename);
-      var template = XmlResources.XML_TEMPLATE_EQUIPMENT_MODEL.Replace("\0", string.Empty);
-      File.WriteAllText(tempXmlFile, template);
-      return tempXmlFile;
-    }
-
-    private string CreateTempFilePath(string filename)
-    {
-      var tempDirectory = Path.Combine(Path.GetTempPath(), this.GetType().ToString());
-      var tempXmlFile = Path.Combine(Path.GetTempPath(), this.GetType().ToString(), filename);
-      if (!Directory.Exists(tempDirectory))
-      {
-        Directory.CreateDirectory(tempDirectory);
-      }
-      return tempXmlFile;
     }
 
     /// <summary>
@@ -95,11 +72,14 @@ namespace CreateZenonThings.Creator
 
     private XElement GetTemplateModelNode()
     {
-      var template = CreateXmlFileFromResourcesTemplate("temporary.xml");
+      var template = XmlFileHandling.CreateXmlFileFromResourcesTemplate(
+        this.GetType().ToString(), 
+        XmlResources.XML_TEMPLATE_EQUIPMENT_MODEL ,
+        "temporary.xml");
       var xmlTemplate = XDocument.Load(template);
       File.Delete(template);
       return xmlTemplate.Root
-        .Element(XmlTags.EquipmentModel.Apartment)
+        .Element(XmlTags.Apartment)
         .Element(XmlTags.EquipmentModel.SystemModel)
         .Element(XmlTags.EquipmentModel.Model);
     }
@@ -110,10 +90,13 @@ namespace CreateZenonThings.Creator
     /// </summary>
     private XDocument GetZenonCompatibleEquipmentModelXml()
     {
-      var template = CreateXmlFileFromResourcesTemplate("temporarytemplate.xml");
+      var template = XmlFileHandling.CreateXmlFileFromResourcesTemplate(
+        this.GetType().ToString(),
+        XmlResources.XML_TEMPLATE_EQUIPMENT_MODEL,
+        "temporarytemplate.xml");
       var xmlTemplate = XDocument.Load(template);
       File.Delete(template);
-      var systemModel = xmlTemplate.Root.Element(XmlTags.EquipmentModel.Apartment).Element(XmlTags.EquipmentModel.SystemModel);
+      var systemModel = xmlTemplate.Root.Element(XmlTags.Apartment).Element(XmlTags.EquipmentModel.SystemModel);
       systemModel.Remove();
       return xmlTemplate;
     }

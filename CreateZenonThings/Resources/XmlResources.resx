@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="XML_TEMPLATE_ALLOCATION" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>XML_TEMPLATE_ALLOCATION.XML;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
   <data name="XML_TEMPLATE_EQUIPMENT_MODEL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>XML_TEMPLATE_EQUIPMENT_MODEL.XML;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
